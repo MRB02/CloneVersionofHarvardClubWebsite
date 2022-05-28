@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Scheherazade+New&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .right .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5,
+    .img6,
+    .img7,
+    .img8,
+    .img9 {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.left {
+    position: fixed;
+    float: left;
+    width: 25%;
+    height: 100vh;
+    background-color: rgba(133, 4, 4, 0.9);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+}
+
+@media only screen and (max-width: 1050px) {
+    .left {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .left {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 2;
+    }
+}
+
+.logo {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .left img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin: 20px 10px;
+    }
+    .left img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.left i {
+    display: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .left i {
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px;
+        cursor: pointer;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and(max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-inner {
+    list-style-type: none;
+}
+
+.bar-inner li {
+    padding: 5px 10px;
+}
+
+.bar-inner li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .bar-inner li a {
+        font-size: 16px;
+    }
+}
+
+.bar-inner li:hover {
+    background-color: rgb(80, 0, 0);
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+    .bar-inner {
+        display: none;
+        position: absolute;
+        left: 40%;
+        top: 160px;
+    }
+    .bottom {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 97vw;
+        height: 100px;
+        margin: 10px;
+        bottom: 15px;
+        background-color: rgb(80, 0, 0);
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bottom ul {
+        margin: 5px;
+        list-style-type: none;
+    }
+}
+
+.bottom ul {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .bottom ul {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .bottom ul {
+        margin-top: 10px;
+    }
+}
+
+.bottom ul li {
+    padding: 5px 10px;
+}
+
+.bottom ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.bottom ul li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1050px) {
+    .bottom ul li a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .bottom ul li a {
+        font-size: 18px;
+        color: white;
+    }
+}
+
+
+/*right*/
+
+.right {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    min-height: 100vh;
+    background-color: rgb(252, 252, 252);
+}
+
+@media only screen and (max-width: 1050px) {
+    .right {
+        position: absolute;
+        left: 30%;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .right {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.right h1 {
+    font-family: 'Scheherazade New', serif;
+}
+
+.right p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 1050px) {
+    .right h1 {
+        font-size: 1.6em;
+    }
+    .right p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .right h1 {
+        font-size: 1.4em;
+    }
+    .right p {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .right h1 {
+        font-size: 1em;
+    }
+    .right p {
+        font-size: 12px;
+    }
+}
+
+button[type=button] {
+    padding: 5px 15px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(15, 247, 227);
+    outline: none;
+    border: none;
+    font-family: 'Scheherazade New', serif;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:650px) {
+    button[type=button] {
+        padding: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: rgb(15, 247, 227);
+        outline: none;
+        border: none;
+        font-family: 'Scheherazade New', serif;
+        font-weight: 700;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+}
+
+button[type=button]:hover {
+    background-color: rgb(12, 235, 216);
+}
+
+button[type=button] i {
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width:650px) {
+    button[type=button] i {
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+.page1 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img1 {
+    position: absolute;
+    width: 100%;
+    min-height: 65vh;
+    background-image: url("../Gala_1-small.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.text1 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 65vh;
+    margin: 20px;
+}
+
+
+/*page2*/
+
+.page2 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img2 {
+    position: absolute;
+    width: 100%;
+    min-height: 60vh;
+    background-image: url("../linderpix-21286-compressor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text2 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 60vh;
+    margin: 20px;
+}
+
+
+/*page3*/
+
+.page3 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img3 {
+    position: absolute;
+    width: 100%;
+    min-height: 65vh;
+    background-image: url("../linderpix-HarvardClub-0711-web-compressor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text3 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 65vh;
+    margin: 20px;
+}
+
+
+/*page4*/
+
+.page4 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img4 {
+    position: absolute;
+    width: 100%;
+    min-height: 65vh;
+    background-image: url("../linderpix-HarvardClubBBQ-_LL57790-compressor.jpg ");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text4 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 65vh;
+    margin: 20px;
+}
+
+
+/*p5*/
+
+.page5 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img5 {
+    position: absolute;
+    width: 100%;
+    min-height: 55vh;
+    background-image: url("../DSC3244-compressor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text5 {
+    position: absolute;
+    width: 90%;
+    min-height: 45vh;
+    top: 55vh;
+    margin: 20px;
+}
+
+
+/*page6*/
+
+.page6 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img6 {
+    position: absolute;
+    width: 100%;
+    min-height: 65vh;
+    background-image: url("../PALM-COURT-compressor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text6 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 65vh;
+    margin: 20px;
+}
+
+
+/*page7*/
+
+.page7 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img7 {
+    position: absolute;
+    width: 100%;
+    min-height: 65vh;
+    background-image: url("../Wedding-Photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text7 {
+    position: absolute;
+    width: 90%;
+    min-height: 40vh;
+    top: 65vh;
+    margin: 20px;
+}
+
+
+/*page8*/
+
+.page8 {
+    position: relative;
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img8 {
+    position: absolute;
+    width: 100%;
+    min-height: 60vh;
+    background-image: url("../InnatHC.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text8 {
+    position: absolute;
+    width: 90%;
+    min-height: 45vh;
+    top: 60vh;
+    margin: 20px;
+}
+
+
+/*page9*/
+
+.page9 {
+    position: relative;
+    width: 100%;
+    min-height: 115vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img9 {
+    position: absolute;
+    width: 100%;
+    min-height: 60vh;
+    background-image: url("../InnatHC.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.link {
+    margin: 5px 0;
+}
+
+.link a {
+    color: rgb(23, 221, 235);
+    margin: 0 5px;
+}
+
+.link a:hover {
+    color: red;
+}
+
+.text9 {
+    position: absolute;
+    width: 90%;
+    min-height: 45vh;
+    top: 60vh;
+    margin: 20px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    min-height: 14vh;
+    background-color: rgba(133, 4, 4, 0.9);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer p {
+    font-size: 1.5em;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+@media only screen and (max-width: 1060px) {
+    .footer p {
+        margin: 15px;
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .footer p {
+        text-align: center;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 650px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.part1 {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1060px) {
+    .part1 {
+        margin: 15px;
+    }
+}
+
+.part1 i {
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(15, 247, 227);
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1060px) {
+    .part1 i {
+        font-size: 12px;
+        padding: 7px 9px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .part1 i {
+        font-size: 18px;
+        padding: 13px 16px;
+        cursor: pointer;
+    }
+}
+
+.part1 i:hover {
+    color: rgb(15, 247, 227);
+    background: white;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1060px) {
+    .part1 i:hover {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .part1 i {
+        font-size: 18px;
+        padding: 13px 16px;
+        cursor: pointer;
+    }
+    .part1 i:hover {
+        font-size: 19px;
+    }
+}
+
+.part2 ul {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.part2 ul li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.part2 ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1060px) {
+    .part2 ul li {
+        display: inline-block;
+        margin: 5px;
+        padding-top: 10px;
+    }
+    .part2 ul li a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .part2 ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .part2 ul li {
+        display: block;
+        margin: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+    .part2 ul li a {
+        font-size: 18px;
+    }
+}
+
+.part2 ul li a:hover {
+    color: rgb(15, 247, 227);
+    text-decoration: underline;
+}
+
+
+/*next*/
+
+.fixed {
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    margin-bottom: 5px;
+    z-index: 2;
+}
+
+.right-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-links i {
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(15, 247, 227);
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.right-links i:hover {
+    color: rgb(15, 247, 227);
+    background: white;
+    font-size: 16px;
+}
